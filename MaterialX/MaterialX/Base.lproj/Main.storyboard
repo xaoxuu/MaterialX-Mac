@@ -685,7 +685,7 @@
         <!--Window Controller-->
         <scene sceneID="R2V-B0-nI4">
             <objects>
-                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                <windowController id="B8D-0N-5wS" customClass="MainWindow" customModule="MaterialX" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Material X" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" texturedBackground="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
@@ -703,11 +703,13 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="didTappedToolbarItem:" target="B8D-0N-5wS" id="cby-tv-5Bo"/>
+                                    </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="IUk-e0-NM3"/>
-                                <toolbarItem implicitItemIdentifier="95A06738-8935-483F-B8B1-2D6F4FBA73CA" label="主题源码" paletteLabel="主题源码" image="icon_40pt" sizingBehavior="auto" id="BHU-Cm-uIh">
+                                <toolbarItem implicitItemIdentifier="32BA8BC1-D8BC-4038-87DE-74B4AC2065A3" label="主题源码" paletteLabel="主题源码" tag="1" image="icon_40pt" sizingBehavior="auto" id="BHU-Cm-uIh">
                                     <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="opT-K1-uml">
+                                    <button key="view" verticalHuggingPriority="750" tag="1" id="opT-K1-uml">
                                         <rect key="frame" x="0.0" y="14" width="127" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundTextured" title=" " bezelStyle="texturedRounded" image="icon_40pt" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="uvp-hf-Kt3">
@@ -715,11 +717,13 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="didTappedToolbarItem:" target="B8D-0N-5wS" id="DAc-pz-j75"/>
+                                    </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="22g-P8-uQ2"/>
-                                <toolbarItem implicitItemIdentifier="B4EDC93B-53EE-40C0-B65A-DEC4F4F3E107" label="返回" paletteLabel="返回" image="NSLeftFacingTriangleTemplate" sizingBehavior="auto" id="ZMf-A7-aHo">
+                                <toolbarItem implicitItemIdentifier="CA3E7C58-043C-455E-A3AD-9EDA0E8B9C0C" label="返回" paletteLabel="返回" tag="2" image="NSLeftFacingTriangleTemplate" sizingBehavior="auto" id="ZMf-A7-aHo">
                                     <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="lCE-2v-xAE">
+                                    <button key="view" verticalHuggingPriority="750" tag="2" id="lCE-2v-xAE">
                                         <rect key="frame" x="0.0" y="14" width="127" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundTextured" title=" " bezelStyle="texturedRounded" image="NSLeftFacingTriangleTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="o4s-Dm-r7y">
@@ -727,10 +731,13 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="didTappedToolbarItem:" target="B8D-0N-5wS" id="JTT-fs-2gN"/>
+                                    </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="C820FEF3-3E56-4F06-B50C-316A79E39685" label="恢复" paletteLabel="恢复" image="NSRightFacingTriangleTemplate" sizingBehavior="auto" id="8nM-im-Yo9">
+                                <toolbarItem implicitItemIdentifier="7E022807-3DA4-41FF-B34B-29FD7CDC3B5F" label="恢复" paletteLabel="恢复" tag="3" image="NSRightFacingTriangleTemplate" sizingBehavior="auto" id="8nM-im-Yo9">
                                     <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="54X-KR-yUw">
+                                    <button key="view" verticalHuggingPriority="750" tag="3" id="54X-KR-yUw">
                                         <rect key="frame" x="0.0" y="14" width="127" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundTextured" title=" " bezelStyle="texturedRounded" image="NSRightFacingTriangleTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Z0L-7n-kYx">
@@ -738,21 +745,13 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="didTappedToolbarItem:" target="B8D-0N-5wS" id="RIs-cu-Wy2"/>
+                                    </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="6480FA0B-4D9F-4ACA-91CE-22B9E42038A7" label="刷新" paletteLabel="刷新" image="NSRefreshTemplate" sizingBehavior="auto" id="dcn-rG-qjZ">
+                                <toolbarItem implicitItemIdentifier="A4248A37-FF14-447D-A5FA-D5482E49CC0B" label="Hexo官方文档" paletteLabel="Hexo官方文档" tag="99" image="icon_40pt" sizingBehavior="auto" id="AqL-el-EcG">
                                     <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="KOd-3b-P3R">
-                                        <rect key="frame" x="0.0" y="14" width="127" height="25"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="roundTextured" title=" " bezelStyle="texturedRounded" image="NSRefreshTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="HgB-y6-gfH">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                    </button>
-                                </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="DA192473-F822-4238-8FF4-4358FD9F370B" label="Hexo官方文档" paletteLabel="Hexo官方文档" image="icon_40pt" sizingBehavior="auto" id="AqL-el-EcG">
-                                    <nil key="toolTip"/>
-                                    <button key="view" verticalHuggingPriority="750" id="5bH-xl-PyP">
+                                    <button key="view" verticalHuggingPriority="750" tag="99" id="5bH-xl-PyP">
                                         <rect key="frame" x="0.0" y="14" width="127" height="25"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <buttonCell key="cell" type="roundTextured" title=" " bezelStyle="texturedRounded" image="icon_40pt" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ehh-I8-qI8">
@@ -760,15 +759,47 @@
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
                                     </button>
+                                    <connections>
+                                        <action selector="didTappedToolbarItem:" target="B8D-0N-5wS" id="YH8-0f-wWO"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="1F5D2B5D-ADF5-4333-8A2C-4CB82837CC25" label="帮助" paletteLabel="帮助" tag="9" image="icon_40pt" sizingBehavior="auto" id="tgR-SI-x6m">
+                                    <nil key="toolTip"/>
+                                    <button key="view" verticalHuggingPriority="750" tag="9" id="nwQ-ha-z0s">
+                                        <rect key="frame" x="0.0" y="14" width="127" height="25"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="roundTextured" title=" " bezelStyle="texturedRounded" image="icon_40pt" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="BJt-5M-BH6">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                    </button>
+                                    <connections>
+                                        <action selector="didTappedToolbarItem:" target="B8D-0N-5wS" id="RkZ-Zs-8s5"/>
+                                    </connections>
+                                </toolbarItem>
+                                <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="22g-P8-uQ2"/>
+                                <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="IUk-e0-NM3"/>
+                                <toolbarItem implicitItemIdentifier="B81213DE-1067-477B-BB78-95B425323AFF" label="" paletteLabel="当前网址" sizingBehavior="auto" id="uEZ-Kw-NiM">
+                                    <nil key="toolTip"/>
+                                    <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ckg-MS-xq6">
+                                        <rect key="frame" x="8" y="14" width="37" height="17"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="rHt-yk-eqz">
+                                            <font key="font" usesAppearanceFont="YES"/>
+                                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                        </textFieldCell>
+                                    </textField>
                                 </toolbarItem>
                             </allowedToolbarItems>
                             <defaultToolbarItems>
-                                <toolbarItem reference="BHU-Cm-uIh"/>
-                                <toolbarItem reference="22g-P8-uQ2"/>
-                                <toolbarItem reference="ZMf-A7-aHo"/>
                                 <toolbarItem reference="9cD-lP-dsX"/>
+                                <toolbarItem reference="ZMf-A7-aHo"/>
                                 <toolbarItem reference="8nM-im-Yo9"/>
                                 <toolbarItem reference="22g-P8-uQ2"/>
+                                <toolbarItem reference="uEZ-Kw-NiM"/>
+                                <toolbarItem reference="22g-P8-uQ2"/>
+                                <toolbarItem reference="BHU-Cm-uIh"/>
                                 <toolbarItem reference="AqL-el-EcG"/>
                             </defaultToolbarItems>
                         </toolbar>
@@ -777,6 +808,10 @@
                         </connections>
                     </window>
                     <connections>
+                        <outlet property="goBackItem" destination="ZMf-A7-aHo" id="k4S-CC-6Ni"/>
+                        <outlet property="goForwardItem" destination="8nM-im-Yo9" id="tWc-b3-EbP"/>
+                        <outlet property="lb" destination="ckg-MS-xq6" id="1ox-6o-ukq"/>
+                        <outlet property="win" destination="IQv-IB-iLA" id="2ph-p4-rx3"/>
                         <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
                     </connections>
                 </windowController>
@@ -819,7 +854,6 @@
     <resources>
         <image name="NSHomeTemplate" width="14" height="14"/>
         <image name="NSLeftFacingTriangleTemplate" width="9" height="12"/>
-        <image name="NSRefreshTemplate" width="11" height="15"/>
         <image name="NSRightFacingTriangleTemplate" width="9" height="12"/>
         <image name="icon_40pt" width="40" height="40"/>
     </resources>

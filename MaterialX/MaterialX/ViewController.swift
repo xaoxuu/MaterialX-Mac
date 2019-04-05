@@ -10,6 +10,9 @@ import Cocoa
 import WebKit
 
 let docsURL = "https://xaoxuu.com/wiki/material-x/"
+let codeURL = "https://github.com/xaoxuu/hexo-theme-material-x/"
+let helpURL = "https://xaoxuu.com/wiki/material-x/help/"
+let hexoURL = "https://hexo.io/zh-cn/"
 
 class ViewController: NSViewController, WKNavigationDelegate {
 
@@ -26,9 +29,32 @@ class ViewController: NSViewController, WKNavigationDelegate {
         
         loadURL(urlStr: docsURL)
         
+        NotificationCenter.default.addObserver(forName: didTapped, object: nil, queue: .main) { (note) in
+            if let tag = note.object as? Int {
+                print(tag)
+                switch tag {
+                case 1:
+                    self.loadURL(urlStr: codeURL)
+                case 2:
+                    self.webView.goBack()
+                case 3:
+                    self.webView.goForward()
+                case 9:
+                    self.loadURL(urlStr: helpURL)
+                case 99:
+                    self.loadURL(urlStr: hexoURL)
+                default:
+                    self.loadURL(urlStr: docsURL)
+                    break
+                }
+            }
+            
+        }
         
     }
-
+    @IBAction func didTappedHomeBtn(_ sender: NSButton) {
+        loadURL(urlStr: docsURL)
+    }
     override var representedObject: Any? {
         didSet {
         // Update the view, if already loaded.
@@ -70,6 +96,19 @@ class ViewController: NSViewController, WKNavigationDelegate {
         webView.load(navigationAction.request)
         decisionHandler(.allow)
     }
+    
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        if let url = webView.url {
+            NotificationCenter.default.post(name: currentURL, object: url.description)
+        }
+        NotificationCenter.default.post(name: canGoBack, object: webView.canGoBack)
+        NotificationCenter.default.post(name: canGoForword, object: webView.canGoForward)
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        NotificationCenter.default.post(name: currentTitle, object: webView.title)
+    }
+    
     
 }
 
