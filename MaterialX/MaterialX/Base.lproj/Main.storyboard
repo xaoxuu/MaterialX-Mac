@@ -782,9 +782,9 @@
                                 <toolbarItem implicitItemIdentifier="B81213DE-1067-477B-BB78-95B425323AFF" label="" paletteLabel="当前网址" sizingBehavior="auto" id="uEZ-Kw-NiM">
                                     <nil key="toolTip"/>
                                     <textField key="view" horizontalHuggingPriority="251" verticalHuggingPriority="750" id="ckg-MS-xq6">
-                                        <rect key="frame" x="8" y="14" width="37" height="17"/>
+                                        <rect key="frame" x="0.0" y="14" width="222" height="17"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="rHt-yk-eqz">
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="https://xaoxuu.com/wiki/material-x/" id="rHt-yk-eqz">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -825,11 +825,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MaterialX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
-                        <autoresizingMask key="autoresizingMask"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView wantsLayer="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfH-Yj-tbo">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
                                 <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -849,7 +849,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="1063"/>
         </scene>
     </scenes>
     <resources>
