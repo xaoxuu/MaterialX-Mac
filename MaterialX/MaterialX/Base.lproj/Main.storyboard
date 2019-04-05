@@ -721,7 +721,7 @@
                                         <action selector="didTappedToolbarItem:" target="B8D-0N-5wS" id="DAc-pz-j75"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="CA3E7C58-043C-455E-A3AD-9EDA0E8B9C0C" label="返回" paletteLabel="返回" tag="2" image="NSGoBackTemplate" sizingBehavior="auto" id="ZMf-A7-aHo">
+                                <toolbarItem implicitItemIdentifier="CA3E7C58-043C-455E-A3AD-9EDA0E8B9C0C" label="后退" paletteLabel="后退" tag="2" image="NSGoBackTemplate" sizingBehavior="auto" id="ZMf-A7-aHo">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" tag="2" id="lCE-2v-xAE">
                                         <rect key="frame" x="0.0" y="14" width="127" height="25"/>
@@ -735,7 +735,7 @@
                                         <action selector="didTappedToolbarItem:" target="B8D-0N-5wS" id="JTT-fs-2gN"/>
                                     </connections>
                                 </toolbarItem>
-                                <toolbarItem implicitItemIdentifier="7E022807-3DA4-41FF-B34B-29FD7CDC3B5F" label="恢复" paletteLabel="恢复" tag="3" image="NSGoForwardTemplate" sizingBehavior="auto" id="8nM-im-Yo9">
+                                <toolbarItem implicitItemIdentifier="7E022807-3DA4-41FF-B34B-29FD7CDC3B5F" label="前进" paletteLabel="前进" tag="3" image="NSGoForwardTemplate" sizingBehavior="auto" id="8nM-im-Yo9">
                                     <nil key="toolTip"/>
                                     <button key="view" verticalHuggingPriority="750" tag="3" id="54X-KR-yUw">
                                         <rect key="frame" x="0.0" y="14" width="127" height="25"/>
@@ -825,11 +825,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MaterialX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView wantsLayer="YES" allowsBackForwardNavigationGestures="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cfH-Yj-tbo">
-                                <rect key="frame" x="0.0" y="0.0" width="1280" height="800"/>
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                                 <wkWebViewConfiguration key="configuration" applicationNameForUserAgent="">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
@@ -849,7 +849,7 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="1063"/>
+            <point key="canvasLocation" x="75" y="696"/>
         </scene>
     </scenes>
     <resources>
