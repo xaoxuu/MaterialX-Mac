@@ -66,14 +66,17 @@ class ViewController: NSViewController, WKNavigationDelegate {
     func setupFrame(){
         if let fr = NSScreen.main?.visibleFrame {
             debugPrint(fr)
-            view.frame.size.width = 0.7*fr.width
-            view.frame.size.height = 0.7*fr.height
-            // 最小值
-            view.frame.size.width = max(view.frame.size.width, 1280)
-            view.frame.size.height = max(view.frame.size.height, 768)
-            // 最大值
-            view.frame.size.width = min(view.frame.size.width, 1500)
-            view.frame.size.height = min(view.frame.size.height, 900)
+            var width = 0.6*fr.width
+            var height = 0.6*fr.height
+            if width > 1500 {
+                width = 1500
+                height = 900
+            } else if width < 1024 {
+                width = 1024
+                height = 640
+            }
+            view.frame.size.width = width
+            view.frame.size.height = height
             debugPrint(view.frame)
         }
     }
@@ -101,7 +104,6 @@ class ViewController: NSViewController, WKNavigationDelegate {
                 return
             }
         }
-        
         webView.load(navigationAction.request)
         decisionHandler(.allow)
     }
