@@ -12,7 +12,7 @@ let didTapped = Notification.Name.init("didTapped")
 
 let canGoBack = Notification.Name.init("canGoBack")
 let canGoForword = Notification.Name.init("canGoForword")
-let currentURL = Notification.Name.init("currentURL")
+
 let currentTitle = Notification.Name.init("currentTitle")
 
 
@@ -21,8 +21,6 @@ class MainWindow: NSWindowController {
     @IBOutlet weak var win: NSWindow!
     @IBOutlet weak var goBackItem: NSToolbarItem!
     @IBOutlet weak var goForwardItem: NSToolbarItem!
-    
-    @IBOutlet weak var lb: NSTextField!
     
     @IBAction func didTappedToolbarItem(_ sender: NSToolbarItem) {
         
@@ -41,16 +39,13 @@ class MainWindow: NSWindowController {
                 }
             }
         }
-        NotificationCenter.default.addObserver(forName: currentURL, object: nil, queue: .main) { (note) in
-            if let str = note.object as? String {
-                self.lb.stringValue = str
-            }
-        }
+        
         NotificationCenter.default.addObserver(forName: canGoBack, object: nil, queue: .main) { (note) in
             if let can = note.object as? Bool {
                 self.goBackItem.isEnabled = can
             }
         }
+        
         NotificationCenter.default.addObserver(forName: canGoForword, object: nil, queue: .main) { (note) in
             if let can = note.object as? Bool {
                 self.goForwardItem.isEnabled = can

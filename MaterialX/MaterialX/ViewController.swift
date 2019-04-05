@@ -12,7 +12,7 @@ import WebKit
 let docsURL = "https://xaoxuu.com/wiki/material-x/"
 let codeURL = "https://github.com/xaoxuu/hexo-theme-material-x/"
 let helpURL = "https://xaoxuu.com/wiki/material-x/help/"
-let hexoURL = "https://hexo.io/zh-cn/"
+let hexoURL = "https://hexo.io"
 
 class ViewController: NSViewController, WKNavigationDelegate {
 
@@ -21,7 +21,8 @@ class ViewController: NSViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.post(name: currentTitle, object: "Welcome!")
+        
         setupFrame()
         
         webView.navigationDelegate = self
@@ -31,7 +32,6 @@ class ViewController: NSViewController, WKNavigationDelegate {
         
         NotificationCenter.default.addObserver(forName: didTapped, object: nil, queue: .main) { (note) in
             if let tag = note.object as? Int {
-                print(tag)
                 switch tag {
                 case 1:
                     self.loadURL(urlStr: codeURL)
@@ -39,6 +39,8 @@ class ViewController: NSViewController, WKNavigationDelegate {
                     self.webView.goBack()
                 case 3:
                     self.webView.goForward()
+                case 4:
+                    self.loadURL(urlStr: "https://xaoxuu.com")
                 case 9:
                     self.loadURL(urlStr: helpURL)
                 case 99:
@@ -79,6 +81,13 @@ class ViewController: NSViewController, WKNavigationDelegate {
     func loadURL(urlStr: String){
         if let url = URL.init(string: urlStr) {
             let req = URLRequest.init(url: url)
+            if let cur = webView.url {
+                if cur == url {
+                    debugPrint("reload")
+                    webView.reloadFromOrigin()
+                    return
+                }
+            }
             webView.load(req)
         }
     }
@@ -99,14 +108,10 @@ class ViewController: NSViewController, WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
         if let url = webView.url {
-            NotificationCenter.default.post(name: currentURL, object: url.description)
+            NotificationCenter.default.post(name: currentTitle, object: url.description)
         }
         NotificationCenter.default.post(name: canGoBack, object: webView.canGoBack)
         NotificationCenter.default.post(name: canGoForword, object: webView.canGoForward)
-    }
-    
-    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-        NotificationCenter.default.post(name: currentTitle, object: webView.title)
     }
     
     

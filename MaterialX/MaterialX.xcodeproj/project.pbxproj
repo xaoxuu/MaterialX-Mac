@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD14C3CF225731C600148703 /* MainWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD14C3CE225731C600148703 /* MainWindow.swift */; };
+		CD14C3F122576CF600148703 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD14C3F022576CF600148703 /* WebKit.framework */; };
 		CD6C5A6B2257137900A208A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C5A6A2257137900A208A6 /* AppDelegate.swift */; };
 		CD6C5A6D2257137900A208A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD6C5A6C2257137900A208A6 /* ViewController.swift */; };
 		CD6C5A6F2257137A00A208A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD6C5A6E2257137A00A208A6 /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		CD14C3CE225731C600148703 /* MainWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindow.swift; sourceTree = "<group>"; };
+		CD14C3F022576CF600148703 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		CD6C5A672257137900A208A6 /* MaterialX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MaterialX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD6C5A6A2257137900A208A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD6C5A6C2257137900A208A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,17 +32,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD14C3F122576CF600148703 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD14C3EF22576CF600148703 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CD14C3F022576CF600148703 /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CD6C5A5E2257137900A208A6 = {
 			isa = PBXGroup;
 			children = (
 				CD6C5A692257137900A208A6 /* MaterialX */,
 				CD6C5A682257137900A208A6 /* Products */,
+				CD14C3EF22576CF600148703 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
